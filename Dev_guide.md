@@ -1,14 +1,15 @@
 ## 0. XD 가이드 문서   
 - https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/
+  - [버튼/박스/기타요소 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/16e5984f-0afa-47fe-9ab2-ca01317e9622/specs/)
+  - [어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/0ec414bc-3a19-4355-8291-993fc2928279/specs/)
+  - [전자서명 조건별 어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/45e7f72b-8444-4b69-9b5a-22f88d0e4999/specs/)
+  - [약정서 조건별 어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/6b431cbf-c279-4e03-af8a-f6f5b02d736a/specs/)
 - 1x로 작업하였습니다.
 - 각 요소를 선택하면 픽셀, 크기, 자간, 마진, 색상, 등 정보를 확인하실 수 있습니다.
 - 이미지가 없으면 카카오톡 채팅방이나 박팀장님을 통해 전달주시면 전달 드리겠습니다.  
 일반적으로 이미지들은 PC버전과 각 어플리케이션 페이지에서 익스포트 가능합니다.
 - xd파일을 직접 확인하고자 하시면 adobe 계정을 알려주시면 초대하겠습니다.
-- [버튼/박스/기타요소 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/16e5984f-0afa-47fe-9ab2-ca01317e9622/specs/)
-- [어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/0ec414bc-3a19-4355-8291-993fc2928279/specs/)
-- [전자서명 조건별 어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/45e7f72b-8444-4b69-9b5a-22f88d0e4999/specs/)
-- [약정서 조건별 어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/6b431cbf-c279-4e03-af8a-f6f5b02d736a/specs/)
+
 # :blue_book: 목차
 ## [XD 가이드 문서](#0-xd-가이드-문서)
 ## [Background](#one-Background)
