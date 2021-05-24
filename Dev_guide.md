@@ -81,7 +81,7 @@
 # :two: 프론트 페이지
 ## 1. 메인
 - 메인비쥬얼 구현 벤치마킹  
-[롯데캐슬 홈페이지](https://www.lottecastle.co.kr/main/index.do)
+롯데캐슬 홈페이지 https://www.lottecastle.co.kr/main/index.do
 ## 2. 기부하기
 ### 가. 기부하기
 ### 나. 약정서
@@ -115,7 +115,7 @@ https://getbootstrap.com/docs/5.0/forms/validation/#server-side
 - 상세 예제사이트  
 https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/
 ### 플로팅 라벨
-- 부트스트랩5 벤치마킹
+- 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/floating-labels/
 ### 서브메뉴
 - 서브메뉴 가로스크롤 구현  
