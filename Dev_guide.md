@@ -1,4 +1,4 @@
-# :blue_book: 목차d
+# :blue_book: 목차
 ## [Background](#one-Background)
 - [대학 발전기금 시스템](#1-대학-발전기금시스템)
 - [과업지시서](#2-과업지시서)
