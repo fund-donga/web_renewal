@@ -116,8 +116,11 @@
 ### 인풋 박스 유효성 검사
 - 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/validation/#server-side
-- 상세 예제사이트  
-https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/
+- 참고사이트  
+https://www.positronx.io/php-form-validation/  
+http://reusableforms.com/d/e1/php-contact-form-with-validation  
+https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/  
+http://jun.hansung.ac.kr/SWP/PHP/PHP%20Form%20Validation.html
 ### 플로팅 라벨
 - 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/floating-labels/
