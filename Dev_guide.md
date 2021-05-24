@@ -121,6 +121,9 @@ https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/
 ### 플로팅 라벨
 - 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/floating-labels/
+- 참고사이트  
+https://github.com/anydigital/float-label-css  
+https://aosceno.tistory.com/403
 ### 서브메뉴
 - 서브메뉴 가로스크롤 구현  
   - 네이버 스마트어라운드 벤치마킹  
