@@ -1,4 +1,4 @@
-## 0. XD 가이드 문서   
+## :zero: XD 가이드 문서   
 - https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/
   - [버튼/박스/기타요소 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/16e5984f-0afa-47fe-9ab2-ca01317e9622/specs/)
   - [어플리케이션 바로가기](https://xd.adobe.com/view/26be83b6-2348-4c67-ab75-79010b78b03e-73ed/screen/0ec414bc-3a19-4355-8291-993fc2928279/specs/)
@@ -11,7 +11,7 @@
 - xd파일을 직접 확인하고자 하시면 adobe 계정을 알려주시면 초대하겠습니다.
 
 # :blue_book: 목차
-## [XD 가이드 문서](#0-xd-가이드-문서)
+## [XD 가이드 문서](#zero-xd-가이드-문서)
 ## [Background](#one-Background)
 - [대학 발전기금 시스템](#1-대학-발전기금시스템)
 - [과업지시서](#2-과업지시서)
@@ -59,13 +59,21 @@
 # :one: Background
 ## 1. 대학 발전기금시스템
 ### 가. 시스템 화면
+- 검색화면  
 ![검색화면](guide_img/raisingsystem_001.png)
 ![검색화면 2](guide_img/raisingsystem_002.png)
+- 회원정보
+  - 개인  
 ![회원정보-개인](guide_img/raisingsystem_003.png)
+  - 법인  
 ![회원정보-법인](guide_img/raisingsystem_004.png)
+- 증서조회  
 ![증서](guide_img/raisingsystem_005.png)
+- 납입내역  
 ![납입내역](guide_img/raisingsystem_006.png)
+- 약정서업로드  
 ![약정서업로드](guide_img/raisingsystem_007.png)
+- 기부금영수증  
 ![기부금영수증](guide_img/raisingsystem_008.png)
 ## 2. 과업지시서
 ## 3. 외부 연동계획
@@ -101,9 +109,18 @@
 ## 7. 메뉴
 ## 8. 기타
 ### 레이어 팝업
-### 서브메뉴 구현
+### 인풋 박스 유효성 검사
+- 부트스트랩5 벤치마킹  
+https://getbootstrap.com/docs/5.0/forms/validation/#server-side
+- 상세 예제사이트  
+https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/
+### 플로팅 라벨
+- 부트스트랩5 벤치마킹
+https://getbootstrap.com/docs/5.0/forms/floating-labels/
+### 서브메뉴
 - 서브메뉴 가로스크롤 구현  
-[네이버 스마트어라운드 벤치마킹](https://s.search.naver.com/p/around/search.naver)
+  - 네이버 스마트어라운드 벤치마킹  
+  https://s.search.naver.com/p/around/search.naver
 ### 팝업 알림
 
 
