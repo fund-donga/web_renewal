@@ -1,0 +1,142 @@
+
+<html>
+
+<head>
+    <title>Chart.js</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+    <canvas id="annual_collection" width="400" height="300"></canvas>
+    <script>
+        Chart.defaults.font.family = 'paybooc-Medium';
+
+        Chart.defaults.font.size = 16;
+        var ctx = document.getElementById('annual_collection').getContext('2d');
+        var annual_collection = new Chart(ctx, {
+            type: 'bar',
+
+            data: {
+                labels: ['2015학년도', '2016학년도', '2017학년도', '2019학년도', '2020학년도'],
+                datasets: [{
+                        label: '발전기금',
+                        data: [2661719523, 1765869834, 1736796959, 2149890349, 1767570959],
+                        borderColor: '#0061AE',
+                        backgroundColor: '#0061AE',
+                        borderRadius: 10,
+
+                    },
+                    {
+                        label: '장학금',
+                        data: [1432174378, 1218600580, 1432408367, 1201413650, 1019224168],
+                        borderColor: '#019BDE',
+                        backgroundColor: '#019BDE',
+                        borderRadius: 10,
+
+                    },
+                    {
+
+                        label: '현물',
+                        data: [716890000, 98532000, 52716000, 30522140, 208501578],
+                        borderColor: '#27A9E1',
+                        backgroundColor: '#27A9E1',
+                        borderRadius: 10,
+
+
+                    },
+                    {
+                        label: '유가증권',
+                        data: [0, 0, 0, 8420000000, 2500140076],
+                        borderColor: '#8fcdff',
+                        backgroundColor: '#8fcdff',
+                        borderRadius: 10,
+
+                    },
+
+                    {
+                        label: '연간모금액',
+                        type: 'line',
+                        borderColor: '#F38E29',
+                        backgroundColor: '#FFFFFF',
+                        data: [4810783901, 3083002414, 3221921326, 11801826139, 5495436781],
+                        borderWidth: 6
+
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: false,
+                        text: (ctx) => '최근 5년간 발전기금 모금 추이'
+                    },
+
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        backgroundColor: 'rgba(250, 250, 250, 0.7)',
+                        titleColor: 'rgb(85, 85, 85)',
+                        bodyColor: 'rgb(85, 85, 85)',
+                        bodySpacing: 10,
+                        borderColor: 'rgb(200, 200, 200)',
+                        borderWidth: 1
+                    },
+                    deffered: {
+
+                    },
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                },
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 0,
+                        to: 0.4,
+                    },
+
+                },
+                scales: {
+                    x: {
+
+                        grid: {
+                            display: false,
+                        },
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            font: {
+                                family: 'paybooc-Bold',
+                                size: 16
+                            }
+                        }
+                    },
+                    y: {
+                        display: false,
+                        grid: {
+                            display: false,
+                        },
+
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            display: false,
+                        }
+                    }
+                }
+
+            },
+
+        });
+    </script>
+</body>
+
+</html>
