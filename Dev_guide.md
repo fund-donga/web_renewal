@@ -198,7 +198,7 @@ https://xd.adobe.com/view/0e93af62-ed1d-49b2-bbdf-8b188ff8de02-5bc0/
 ### 나. 약정서
 약정서 작성 페이지 입니다. 시안을 참고해 주십시오.
 ### 다. 전자서명
-약정서를 전자서명 페이지 입니다.
+전자서명 페이지 입니다.
 
 ### 라. 결제완료/약정완료
 ## 3. 기부 프로그램
@@ -209,6 +209,8 @@ https://xd.adobe.com/view/0e93af62-ed1d-49b2-bbdf-8b188ff8de02-5bc0/
 ### 가. 기부소식
 ### 나. 간행물
 ### 다. 모금현황
+연간 모금현황 페이지 입니다.
+차트구현은 예시를 참고해 주시기 바랍니다. [바로가기 /publishing/chart/chart_example.html](/publishing/chart/chart_example.html)
 ### 라. 기부자 예우
 ### 마. 세제혜택
 ### 바. 기부내역 조회
