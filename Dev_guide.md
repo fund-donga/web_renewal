@@ -116,9 +116,20 @@
 ### 인풋 박스 유효성 검사
 - 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/validation/#server-side
+
+- 참고 라이브러리  
+https://github.com/Respect/Validation
+https://github.com/Wixel/GUMP
+
 - 참고사이트  
-https://www.positronx.io/php-form-validation/  
+https://codepen.io/thehoneycroissant/pen/qwmdGW  
+https://medium.com/@daniwhkim/easy-form-validation-with-ajax-load-and-php-6ed530a7fc9d  
 http://reusableforms.com/d/e1/php-contact-form-with-validation  
+https://www.positronx.io/php-form-validation/   
+https://github.com/voku/HtmlFormValidator
+
+- 기타 참고  
+https://www.w3schools.com/php/php_form_validation.asp  
 https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/  
 http://jun.hansung.ac.kr/SWP/PHP/PHP%20Form%20Validation.html
 ### 플로팅 라벨
