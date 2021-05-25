@@ -117,7 +117,7 @@
 https://getbootstrap.com/docs/5.0/forms/validation/#server-side
 
 - 참고 라이브러리  
-https://github.com/Respect/Validation
+https://github.com/Respect/Validation  
 https://github.com/Wixel/GUMP
 
 - 참고사이트  
