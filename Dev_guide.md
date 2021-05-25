@@ -60,6 +60,21 @@
    
 
 # :one: Background
+## 개요
+발전기금 홈페이지 리뉴얼 프로젝트 입니다.  
+- 핵심 구현사항
+  - 기부자가 쉽게 기부하고, 그 내역을 확인 할 수 있으며 기부자 예우가 효율적으로 이루어져야 합니다.
+   - 홈페이지에서는 홈페이지에서 생성된 정보와 키오스크에서 생성된 정보를 취합해 동아대학교 발전기금시스템 DB로 전송합니다.
+## 약정과 결제
+동아대학교는 기부행위 약정과 기부 두가지 단계로 나누어 인식하며 두가지 모두가 이루어졌을 때 기부가 완료되었다고 인식합니다.
+### 약정
+- 기부자가 기부 의사를 구두, 전화, 문서, 전자적 입력을 통해 밝히는 것입니다.  
+  일반 상거래에서 주문, 주문서 입력, 계약서 작성과 유사합니다.
+### 결제
+- 기부자가 밝힌 기부의사에 따라 기부금을 납입 하는 것 입니다.  
+  일반 상거래에서 결제의 의미와 동일 합니다.
+### 개발방향
+- 홈페이지, 키오스크 모두 불가피한 상황을 제외하고는 기부자의 약정과 결제가 한번에 이루어 지도록 개발해야 합니다.
 ## 1. 대학 발전기금시스템
 ### 가. 시스템 화면
 - 검색화면  
@@ -80,15 +95,108 @@
 ![기부금영수증](guide_img/raisingsystem_008.png)
 ## 2. 과업지시서
 ## 3. 외부 연동계획
+## 결제
+### 결제API
+- 아임포트 (https://www.iamport.kr/)
+  - 복수의 결제대행사 이용시 효율적 개발과 유지보수를 위해 아임포트 이용예정
+  - 참고자료
+    - 대시보드 https://admin.iamport.kr/users/login
+    - 개발가이드 https://www.iamport.kr/getstarted
+    - 연동매뉴얼 https://docs.iamport.kr/
+    - Github https://github.com/iamport
+    - API문서 https://api.iamport.kr/
+    - 결제DEMO https://www.iamport.kr/demo
+  - 적용대상
+    - 나이스페이 PG, 카카오페이, 네이버페이
+
+### 결제수단
+전체 결제수단의 개요정보입니다. 상세적용은 홈페이지, 키오스크간 상이할 수 있으니 아래쪽 관련내용과 함께 참조하시기 바랍니다.
+#### 자동이체
+- 결제대행사: 금융결제원CMS
+- 프로세스
+  1. 관리자 약정내역 엑셀 다운로드(웹 관리자 페이지)
+  2. 금융결제원 업로드
+  3. 이체결과 관리자 웹 업로드
+  4. 결제내역 
+#### 신용카드 (PG, 정기결제)
+- 결제대행사: 나이스페이(PG, 가입예정)
+- REST API방식  
+  https://docs.iamport.kr/implementation/subscription  
+  https://github.com/iamport/iamport-manual/blob/master/%EB%B9%84%EC%9D%B8%EC%A6%9D%EA%B2%B0%EC%A0%9C/example/nice-request-billing-key.md
+#### 신용카드 (현장 일시불 결제)
+- 결제대행사: KSNet(VAN, 가입예정)
+- KSNET 제공 결제모듈 이용
+- 키오스크에서만 지원하는 결제 방식
+- 기부자에게 할부 수수료가 발생하므로 할부결제 이용하지 않음  
+  분납 이용하고자 하는 기부자는 신용카드 정기결제로 처리
+#### 카카오페이 (일시/정기결제)
+- 결제대행사: 카카오페이(PG, 가입예정)
+- 아임포트 이용
+  - 일시결제 https://github.com/iamport/iamport-manual/blob/master/%EC%9D%B8%EC%A6%9D%EA%B2%B0%EC%A0%9C/sample/kakao.md
+  - 정기결제 https://github.com/iamport/iamport-manual/blob/master/%EB%B9%84%EC%9D%B8%EC%A6%9D%EA%B2%B0%EC%A0%9C/example/kakaopay-request-billing-key.md
+- 참고자료  
+  - 카카오페이 개발자 센터 https://developers.kakao.com/docs/latest/ko/kakaopay/common
+- 유사 웹페이지 적용 사례
+  - 서원대학교 발전기금 홈페이지 (일시/정기기부 적용) https://with.seowon.ac.kr/with/fund/step?menuId=MENU00353
+  - 푸르메 재단 (일시기부 적용) https://purme.org/donation-apply
+
+#### 썸패스 (일시결제)
+- 결제대행사: 썸뱅크(직접 이체방식)
+- 썸패스는 키오스크에만 적용 예정입니다.
+- 부산은행 디지털사업부와 관련 문서, API제공에 대한 협의 예정입니다.
+- 홈페이지에 네이버페이 적용 불가시 썸패스 적용 가능여부 검토예정입니다.
+#### 네이버페이 (일시/정기결제)
+- 결제대행사: 네이버페이 (PG, 가입예정)
+- 네이버페이는 홈페이지만 적용 예정입니다.
+  - 향후 적용여부 판단계획(홈페이지)
+    - 아임포트측과 협의 후 적용 가부 판단
+    - 아임포트 적용 불가시 직접 네이버페이 구현 여부 판단
+    - 네이버페이 최종 적용 불가 판단 시 썸패스의 웹페이지 적용여부를 검토
+    - 네이버페이, 썸패스 모두 웹 적용 불가 판단시 웹은 두가지 모두 구현하지 않음
+- 아임포트 이용
+  - 일시결제 https://github.com/iamport/iamport-manual/blob/master/NAVERPAY/sample/naverpay-pg.md
+  - 정기결제 https://github.com/iamport/iamport-manual/blob/master/NAVERPAY/sample/naverpay-recurring.md
+- 참고자료
+  - 네이버페이 개발자 센터  
+  일시결제 https://developer.pay.naver.com/docs/v2/api#payments-payments_flow  
+  정기결제 https://developer.pay.naver.com/docs/v2/api#recurrent-recurrent_summary
+- 유사 웹페이지 적용 사례
+  - 굿네이버스 https://www.goodneighbors.kr/support_pay/regular.gn
+  - 유니세프 https://www.unicef.or.kr/donation/?TrackCode=pc_donation_btn
+
 ## 4. 키오스크와의 연동
+### 키오스크 개발 정보
+- 키오스크 개발자 가이드 https://github.com/fund-donga/kiosk/blob/main/Dev_guide_kiosk.md
+- 키오스크 프로토 타입
+  - QR코드 모드  
+https://xd.adobe.com/view/d6e5840b-81a8-4ae9-824b-e48f9038e902-83b6/
+  - 전화번호 모드  
+https://xd.adobe.com/view/0e93af62-ed1d-49b2-bbdf-8b188ff8de02-5bc0/
+  - 전체페이지  
+  https://xd.adobe.com/view/0e93af62-ed1d-49b2-bbdf-8b188ff8de02-5bc0/
+### 기본 통신방식
+- 프로토콜 http, 형식 json
+- 참고자료 https://stackoverflow.com/questions/5725430/http-test-server-accepting-get-post-requests
+### 홈페이지 - 키오스크 연동 상세
+- 홈페이지
+  - 키오스크가 QR코드 인증 이후 결제에 필요한 정보를 가져갈 수 있도록 지원합니다.
+  - 키오스크가 제출하는 약정/결제정보를 수신합니다.
+- 키오스크
+  - 홈페이지에 카드사 식별을 위한 BIN 정보를 제공합니다.
+  - 홈페이지에 약정/결제정보를 송신합니다.
+## 5. PG 가입을 위한 퍼블리싱
 # :two: 프론트 페이지
 ## 1. 메인
 - 메인비쥬얼 구현 벤치마킹  
 롯데캐슬 홈페이지 https://www.lottecastle.co.kr/main/index.do
 ## 2. 기부하기
 ### 가. 기부하기
+메뉴바 우측 상단에 위치한 기부하기 버튼 클릭시 이동하는 페이지입니다.
 ### 나. 약정서
+약정서 작성 페이지 입니다. 시안을 참고해 주십시오.
 ### 다. 전자서명
+약정서를 전자서명 페이지 입니다.
+
 ### 라. 결제완료/약정완료
 ## 3. 기부 프로그램
 ### 가. 일반 기부 프로그램
