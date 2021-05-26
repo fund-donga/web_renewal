@@ -243,24 +243,39 @@ https://xd.adobe.com/view/0e93af62-ed1d-49b2-bbdf-8b188ff8de02-5bc0/
 ## 8. 기타
 ### 레이어 팝업
 ### 인풋 박스 유효성 검사
-- 부트스트랩5 벤치마킹  
-https://getbootstrap.com/docs/5.0/forms/validation/#server-side
+기본적으로 클라이언트 사이드로 개발해 주시기 바랍니다.  
+불가피 한 경우에만 서버 사이드로 구현해 주십시오. (ex 계좌번호 유효성 검사)
 
-- 참고 라이브러리  
+- 부트스트랩5 벤치마킹  
+https://getbootstrap.com/docs/5.0/forms/validation/#supported-elements
+
+- 클라이언트 사이드 (우선)
+  - Jquery 라이브러리 (선택)  
+https://jqueryvalidation.org/  (다기능)  
+https://www.jqueryscript.net/form/Form-Validation-Plugin-jQuery-Validity.html  (가벼움)
+
+- 서버 사이드
+  - 일반 form
+    - PHP 라이브러리  
 https://github.com/Respect/Validation  
 https://github.com/Wixel/GUMP
 
-- 참고사이트  
-https://codepen.io/thehoneycroissant/pen/qwmdGW  
-https://medium.com/@daniwhkim/easy-form-validation-with-ajax-load-and-php-6ed530a7fc9d  
-http://reusableforms.com/d/e1/php-contact-form-with-validation  
-https://www.positronx.io/php-form-validation/   
-https://github.com/voku/HtmlFormValidator
+  - 계좌번호 유효성 검사
+    - 링크허브 SDK를 통해 구현합니다. https://www.linkhub.co.kr/Downloads/EasyFinAccount/1779?PageNum=1
+      - [SDK 바로가기](/sdk/linkhub/)
 
-- 기타 참고  
-https://www.w3schools.com/php/php_form_validation.asp  
-https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/  
-http://jun.hansung.ac.kr/SWP/PHP/PHP%20Form%20Validation.html
+
+~~- 참고사이트~~  
+~~https://codepen.io/thehoneycroissant/pen/qwmdGW~~  
+~~https://medium.com/@daniwhkim/easy-form-validation-with-ajax-load-and-php-6ed530a7fc9d~~  
+~~http://reusableforms.com/d/e1/php-contact-form-with-validation~~  
+~~https://www.positronx.io/php-form-validation/~~  
+~~https://github.com/voku/HtmlFormValidator~~
+
+~~- 기타 참고~~  
+~~https://www.w3schools.com/php/php_form_validation.asp~~  
+~~https://eastflag.co.kr/frontend/html5_api/html5-bootstrap-validation/~~  
+~~http://jun.hansung.ac.kr/SWP/PHP/PHP%20Form%20Validation.html~~
 ### 플로팅 라벨
 - 부트스트랩5 벤치마킹  
 https://getbootstrap.com/docs/5.0/forms/floating-labels/
@@ -334,7 +349,7 @@ https://aosceno.tistory.com/403
 ### 라. 발전기금시스템 조회
 대학 발전기금시스템 캡처화면과 동일한 구조로 조회 가능하게 함  
 회원명으로 검색해서 상세내역 조회 하는 방식  
-상단 발전기금 시스템 화면 캡처와 함꼐 참고해 주시기 바랍니다.  [바로가기](#가-시스템-화면)
+상단 발전기금 시스템 화면 캡처와 함께 참고해 주시기 바랍니다.  [바로가기](#가-시스템-화면)
 #### 데이터 구조
 - 회원번호
   - 개인정보/법인정보 (단일 데이터)
@@ -387,6 +402,7 @@ https://aosceno.tistory.com/403
 ### BIN 정보제공
 키오스크는 KSNet 기준 최신 BIN정보를 보유하여야 합니다.  
 홈페이지가 일정 주기로 BIN정보 업데이트를 요청할 경우 BIN정보를 Json값으로 리턴해주어야 합니다.
+- 정보 제공방식은 홈페이지-키오스크 제작업체간 미팅 후 확정되면 이 파트가 업데이트 될 예정입니다.
 ### 가. 기기설정
 - 전자모금함 현황 리스트
 - 키오스크는 각각 기기의 일련번호를 가지고 홈페이지에 등록된 설정값을 가져옵니다. (로컬보다 웹 우선)
